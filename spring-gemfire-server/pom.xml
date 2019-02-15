@@ -11,7 +11,7 @@
     <version>1.0.0.BUILD-SNAPSHOT</version>
   </parent>
 
-  <artifactId>gemfire-server</artifactId>
+  <artifactId>spring-gemfire-server</artifactId>
   <packaging>jar</packaging>
 
   <properties>
@@ -47,6 +47,7 @@
       <groupId>org.springframework.shell</groupId>
       <artifactId>spring-shell</artifactId>
       <version>${spring-shell.version}</version>
+      <optional>true</optional>
     </dependency>
 
     <dependency>
