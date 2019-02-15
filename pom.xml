@@ -16,6 +16,14 @@
   <packaging>pom</packaging>
   <version>1.0.0.BUILD-SNAPSHOT</version>
 
+  <modules>
+    <module>application-core-enums</module>
+    <module>application-core-model</module>
+    <module>application-ext-model</module>
+    <module>gemfire-server</module>
+    <module>application-client</module>
+  </modules>
+
   <name>Spring Session Data GemFire Serialization Example</name>
   <description>
     Spring Boot application using Spring Session backed by Pivotal GemFire to demonstrate various options
@@ -72,13 +80,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.session</groupId>
-      <artifactId>spring-session-data-gemfire</artifactId>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
     </dependency>
 
   </dependencies>
