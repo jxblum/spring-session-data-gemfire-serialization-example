@@ -20,8 +20,9 @@
     <module>application-core-enums</module>
     <module>application-core-model</module>
     <module>application-ext-model</module>
-    <module>gemfire-server</module>
     <module>application-client</module>
+    <module>native-gemfire-server</module>
+    <module>spring-gemfire-server</module>
   </modules>
 
   <name>Spring Session Data GemFire Serialization Example</name>
