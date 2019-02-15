@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.1.2.RELEASE</version>
+  </parent>
+
+  <groupId>io.pivotal.spring.session</groupId>
+  <artifactId>spring-session-data-gemfire-serialization-example</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.0.BUILD-SNAPSHOT</version>
+
+  <name>Spring Session Data GemFire Serialization Example</name>
+  <description>
+    Spring Boot application using Spring Session backed by Pivotal GemFire to demonstrate various options
+    to de/serialize the Session object and it contents.
+  </description>
+  <url>https://github.com/jxblum/</url>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Pivotal Software, Inc.</name>
+    <url>http://www.pivotal.io</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <id>jblum</id>
+      <name>John Blum</name>
+      <email>jblum at pivotal dot io</email>
+      <organization>Pivotal Software, Inc.</organization>
+      <organizationUrl>http://www.spring.io</organizationUrl>
+      <roles>
+        <role>Spring Data Team</role>
+        <role>Spring Data Cassandra Project Lead (Committer)</role>
+        <role>Spring Data GemFire Project Lead (Committer)</role>
+        <role>Spring Data Geode Project Lead (Committer)</role>
+        <role>Spring Session Data GemFire Project Lead (Committer)</role>
+        <role>Spring Session Data Geode Project Lead (Committer)</role>
+        <role>Spring Boot Data GemFire Project Lead (Committer)</role>
+        <role>Spring Boot Data Geode Project Lead (Committer)</role>
+        <role>Apache Geode Committer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <repositories>
+    <repository>
+      <id>spring-libs-release</id>
+      <name>Spring libs-release Maven Repository</name>
+      <url>https://repo.spring.io/libs-release</url>
+    </repository>
+  </repositories>
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.session</groupId>
+      <artifactId>spring-session-data-gemfire</artifactId>
+    </dependency>
+
+  </dependencies>
+
+</project>
