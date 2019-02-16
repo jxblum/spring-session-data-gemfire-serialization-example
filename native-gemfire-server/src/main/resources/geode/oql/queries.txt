@@ -1,0 +1,2 @@
+SELECT session.id FROM /Sessions session
+SELECT attribute.key, attribute.value FROM /Sessions session, session.attributes attribute
