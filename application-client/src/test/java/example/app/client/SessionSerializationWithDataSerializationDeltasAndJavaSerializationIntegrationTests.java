@@ -15,12 +15,12 @@ import org.apache.geode.DataSerializer;
 import org.apache.geode.cache.client.ClientCache;
 import org.apache.geode.internal.InternalDataSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.gemfire.config.annotation.ClientCacheApplication;
 import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
 import org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession;
 import org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration;
-import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import example.app.core.model.Customer;
@@ -33,7 +33,9 @@ import example.app.ext.model.Phone;
  * @since 1.0.0
  */
 @RunWith(SpringRunner.class)
-@ContextConfiguration
+@SpringBootTest(properties = {
+  "spring.data.gemfire.pool.locators=localhost[10334]"
+})
 @SuppressWarnings("unused")
 public class SessionSerializationWithDataSerializationDeltasAndJavaSerializationIntegrationTests {
 
