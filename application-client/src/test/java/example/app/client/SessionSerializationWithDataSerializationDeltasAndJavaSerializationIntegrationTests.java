@@ -39,6 +39,8 @@ import example.app.ext.model.Phone;
 @SuppressWarnings("unused")
 public class SessionSerializationWithDataSerializationDeltasAndJavaSerializationIntegrationTests {
 
+  private static final String GEMFIRE_LOG_LEVEL = "error";
+
   @Autowired
   private ClientCache clientCache;
 
@@ -110,7 +112,7 @@ public class SessionSerializationWithDataSerializationDeltasAndJavaSerialization
     assertThat(loadedSession.<Customer>getAttribute("janeDoe")).isEqualTo(janeDoe);
   }
 
-  @ClientCacheApplication(subscriptionEnabled = true)
+  @ClientCacheApplication(logLevel = GEMFIRE_LOG_LEVEL, subscriptionEnabled = true)
   @EnableGemFireHttpSession(
     poolName = "DEFAULT",
     regionName = "Sessions",
