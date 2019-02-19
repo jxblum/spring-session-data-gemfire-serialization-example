@@ -31,19 +31,18 @@
       <version>${spring-shell.version}</version>
     </dependency>
 
+    <!-- Comment out dependency to produce NoClassDefFoundError! -->
+    <dependency>
+      <groupId>io.pivotal.spring.session</groupId>
+      <artifactId>application-core-enums</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>io.pivotal.spring.session</groupId>
       <artifactId>application-core-model</artifactId>
       <version>${project.version}</version>
     </dependency>
-
-    <!--
-        <dependency>
-          <groupId>io.pivotal.spring.session</groupId>
-          <artifactId>application-core-enums</artifactId>
-          <version>${project.version}</version>
-        </dependency>
-    -->
 
     <dependency>
       <groupId>io.pivotal.spring.session</groupId>
