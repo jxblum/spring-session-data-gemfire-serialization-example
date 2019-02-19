@@ -16,15 +16,24 @@ import org.springframework.session.Session;
 import org.springframework.session.data.gemfire.serialization.data.support.DataSerializableSessionSerializerInitializer;
 
 /**
- * The NativeGemFireServerApplication class...
+ * Java application to configure and bootstrap a Pivotal Gemfire Server using the GemFire API.
+ *
+ * This application class configures a {@link CacheServer} component allowing {@link ClientCache} applications
+ * to connect in a client/server topology and additionally starts an embedded GemFire Locator
+ * as well as an embedded GemFire Manager.
  *
  * @author John Blum
+ * @see org.apache.geode.cache.Cache
+ * @see org.apache.geode.cache.Region
+ * @see org.apache.geode.cache.client.ClientCache
+ * @see org.apache.geode.cache.server.CacheServer
+ * @see org.springframework.session.Session
  * @since 1.0.0
  */
 @SuppressWarnings("all")
 public class NativeGemFireServerApplication {
 
-  private static final int GEMFIRE_CACHE_SERVER_PORT = CacheServer.DEFAULT_PORT;
+  private static final int GEMFIRE_CACHE_SERVER_PORT = 0;
 
   private static final long SESSION_EXPIRATION_TIMEOUT = TimeUnit.MINUTES.toSeconds(30);
 
