@@ -10,9 +10,20 @@ import org.springframework.session.data.gemfire.config.annotation.web.http.Enabl
 import org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration;
 
 /**
- * The GemFireServerApplication class...
+ * Spring Boot application class used to configure and bootstrap a Pivotal GemFire (Cache) Server.
+ *
+ * This application class will also configure and initialize an embedded GemFire Locator and embedded GemFire Manager.
+ *
+ * Finally, this application class will also configure and initialize the server components for Spring Session.
  *
  * @author John Blum
+ * @see org.springframework.boot.autoconfigure.SpringBootApplication
+ * @see org.springframework.boot.builder.SpringApplicationBuilder
+ * @see org.springframework.data.gemfire.config.annotation.CacheServerApplication
+ * @see org.springframework.data.gemfire.config.annotation.EnableLocator
+ * @see org.springframework.data.gemfire.config.annotation.EnableManager
+ * @see org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession
+ * @see org.springframework.session.data.gemfire.config.annotation.web.http.GemFireHttpSessionConfiguration
  * @since 1.0.0
  */
 @SpringBootApplication
@@ -23,11 +34,11 @@ import org.springframework.session.data.gemfire.config.annotation.web.http.GemFi
 )
 @EnableLocator
 @EnableManager(start = true)
-public class GemFireServerApplication {
+public class SpringGemFireServerApplication {
 
   public static void main(String[] args) {
 
-    new SpringApplicationBuilder(GemFireServerApplication.class)
+    new SpringApplicationBuilder(SpringGemFireServerApplication.class)
       .web(WebApplicationType.NONE)
       .build()
       .run(args);
