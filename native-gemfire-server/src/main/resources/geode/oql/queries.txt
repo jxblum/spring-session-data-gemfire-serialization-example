@@ -1,2 +1,2 @@
 SELECT session.id FROM /Sessions session
-SELECT session.id, attribute.key, attribute.value FROM /Sessions session, session.attributes attribute
+SELECT session.id, attribute.key, attribute.value FROM /Sessions session, session.attributes attribute ORDER BY session.id ASC
