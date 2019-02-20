@@ -1,0 +1,8 @@
+#!$GEODE_HOME/bin/gfsh
+
+set variable --name=USER_HOME --value=${SYS_USER_HOME}
+set variable --name=APPLICATION_HOME --value=${USER_HOME}/pivdev/spring-data-examples-workspace/spring-session-data-gemfire-serialization-example
+
+deploy --jar=${APPLICATION_HOME}/application-core-enums/target/application-core-enums-1.0.0.BUILD-SNAPSHOT.jar
+deploy --jar=${APPLICATION_HOME}/application-core-model/target/application-core-model-1.0.0.BUILD-SNAPSHOT.jar
+deploy --jar=${APPLICATION_HOME}/application-ext-model/target/application-ext-model-1.0.0.BUILD-SNAPSHOT.jar
