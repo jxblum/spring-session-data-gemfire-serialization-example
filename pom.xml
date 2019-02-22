@@ -65,17 +65,43 @@
     </developer>
   </developers>
 
+  <properties>
+    <geode.version>1.8.0</geode.version>
+    <spring-data-releasetrain.version>Moore-M1</spring-data-releasetrain.version>
+  </properties>
+
   <repositories>
     <repository>
-      <id>spring-libs-release</id>
-      <name>Spring libs-release Maven Repository</name>
-      <url>https://repo.spring.io/libs-release</url>
+      <id>spring-libs-milestone</id>
+      <name>Spring libs-milestone Maven Repository</name>
+      <url>https://repo.spring.io/libs-milestone</url>
     </repository>
   </repositories>
 
-  <properties>
-    <spring-data-releasetrain.version>Lovelace-SR3</spring-data-releasetrain.version>
-  </properties>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.apache.geode</groupId>
+        <artifactId>geode-core</artifactId>
+        <version>${geode.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.geode</groupId>
+        <artifactId>geode-cq</artifactId>
+        <version>${geode.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.geode</groupId>
+        <artifactId>geode-lucene</artifactId>
+        <version>${geode.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.geode</groupId>
+        <artifactId>geode-wan</artifactId>
+        <version>${geode.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
 
