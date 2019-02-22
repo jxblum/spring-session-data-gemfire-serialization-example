@@ -34,6 +34,7 @@ import org.springframework.session.data.gemfire.serialization.data.support.DataS
 public class NativeGemFireServerApplication {
 
   private static final int GEMFIRE_CACHE_SERVER_PORT = 0;
+  private static final int GEMFIRE_HTTP_SERVICE_PORT = 7070;
 
   private static final long SESSION_EXPIRATION_TIMEOUT = TimeUnit.MINUTES.toSeconds(30);
 
@@ -58,6 +59,7 @@ public class NativeGemFireServerApplication {
     gemfireProperties.setProperty("log-level", GEMFIRE_LOG_LEVEL);
     gemfireProperties.setProperty("jmx-manager", GEMFIRE_MANAGER);
     gemfireProperties.setProperty("jmx-manager-start", GEMFIRE_MANAGER);
+    gemfireProperties.setProperty("http-service-port", String.valueOf(GEMFIRE_HTTP_SERVICE_PORT));
     gemfireProperties.setProperty("start-locator", GEMFIRE_LOCATOR);
 
     return gemfireProperties;
