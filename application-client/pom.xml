@@ -39,7 +39,7 @@
 
     <dependency>
       <groupId>org.springframework.session</groupId>
-      <artifactId>spring-session-data-gemfire</artifactId>
+      <artifactId>spring-session-data-geode</artifactId>
     </dependency>
 
     <!-- Application classes -->
