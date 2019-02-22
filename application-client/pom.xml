@@ -42,7 +42,7 @@
       <artifactId>spring-session-data-gemfire</artifactId>
     </dependency>
 
-    <!-- Application Dependencies -->
+    <!-- Application classes -->
     <dependency>
       <groupId>io.pivotal.spring.session</groupId>
       <artifactId>application-core-model</artifactId>
