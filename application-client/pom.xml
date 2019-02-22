@@ -42,6 +42,7 @@
       <artifactId>spring-session-data-gemfire</artifactId>
     </dependency>
 
+    <!-- Application Dependencies -->
     <dependency>
       <groupId>io.pivotal.spring.session</groupId>
       <artifactId>application-core-model</artifactId>
@@ -60,6 +61,7 @@
       <version>${project.version}</version>
     </dependency>
 
+    <!-- Test Dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
