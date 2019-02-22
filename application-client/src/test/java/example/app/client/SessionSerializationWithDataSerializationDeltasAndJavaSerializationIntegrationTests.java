@@ -5,6 +5,7 @@ import static org.springframework.data.gemfire.util.ArrayUtils.nullSafeArray;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.concurrent.TimeUnit;
 import java.util.function.Predicate;
 
 import org.junit.Before;
@@ -16,7 +17,9 @@ import org.apache.geode.cache.client.ClientCache;
 import org.apache.geode.internal.InternalDataSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.gemfire.config.annotation.ClientCacheApplication;
+import org.springframework.data.gemfire.config.annotation.ClientCacheConfigurer;
 import org.springframework.session.Session;
 import org.springframework.session.SessionRepository;
 import org.springframework.session.data.gemfire.config.annotation.web.http.EnableGemFireHttpSession;
@@ -118,6 +121,13 @@ public class SessionSerializationWithDataSerializationDeltasAndJavaSerialization
     regionName = "Sessions",
     sessionSerializerBeanName = GemFireHttpSessionConfiguration.SESSION_DATA_SERIALIZER_BEAN_NAME
   )
-  static class GemFireClientConfiguration { }
+  static class GemFireClientConfiguration {
 
+    @Bean
+    ClientCacheConfigurer defaultPoolReadTimeoutConfigurer() {
+
+      return (beanName, clientCacheFactoryBean) ->
+        clientCacheFactoryBean.setReadTimeout(Long.valueOf(TimeUnit.MINUTES.toMillis(5)).intValue());
+    }
+  }
 }
