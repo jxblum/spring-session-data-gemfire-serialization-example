@@ -31,7 +31,8 @@
       <version>${spring-shell.version}</version>
     </dependency>
 
-    <!-- Comment out dependency to produce NoClassDefFoundError! -->
+    <!-- Application classes -->
+    <!-- Comment out dependency (e.g. application-core-enums) to produce NoClassDefFoundError/ClassNotFoundException! -->
     <dependency>
       <groupId>io.pivotal.spring.session</groupId>
       <artifactId>application-core-enums</artifactId>

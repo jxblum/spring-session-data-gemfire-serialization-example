@@ -15,7 +15,7 @@
   <packaging>jar</packaging>
 
   <properties>
-    <javax-servlet-api.version>3.1.0</javax-servlet-api.version>
+    <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
     <spring-shell.version>1.2.0.RELEASE</spring-shell.version>
   </properties>
 
@@ -50,7 +50,8 @@
       <optional>true</optional>
     </dependency>
 
-    <!-- Comment out dependency to produce NoClassDefFoundError! -->
+    <!-- Application classes -->
+    <!-- Comment out dependency (e.g. application-core-enums) to produce NoClassDefFoundError/ClassNotFoundException! -->
     <dependency>
       <groupId>io.pivotal.spring.session</groupId>
       <artifactId>application-core-enums</artifactId>
