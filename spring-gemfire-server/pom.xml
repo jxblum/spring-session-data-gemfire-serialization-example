@@ -21,6 +21,15 @@
 
   <dependencies>
 
+<!--
+    <dependency>
+      <groupId>com.oracle.java.jdk</groupId>
+      <artifactId>attach-api</artifactId>
+      <version>1.8.0-192</version>
+      <scope>runtime</scope>
+    </dependency>
+-->
+
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
@@ -39,8 +48,19 @@
     </dependency>
 
     <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jetty</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-logging</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <dependency>
       <groupId>org.springframework.session</groupId>
-      <artifactId>spring-session-data-gemfire</artifactId>
+      <artifactId>spring-session-data-geode</artifactId>
     </dependency>
 
     <dependency>
