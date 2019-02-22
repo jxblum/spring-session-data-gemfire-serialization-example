@@ -14,10 +14,6 @@
   <artifactId>application-client</artifactId>
   <packaging>jar</packaging>
 
-  <properties>
-    <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
-  </properties>
-
   <dependencies>
 
     <dependency>

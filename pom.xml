@@ -65,6 +65,13 @@
     </developer>
   </developers>
 
+  <properties>
+    <javax-servlet-api.version>4.0.1</javax-servlet-api.version>
+    <pivotal-gemfire.version>9.5.1</pivotal-gemfire.version>
+    <spring-data-releasetrain.version>Lovelace-SR3</spring-data-releasetrain.version>
+    <spring-shell.version>1.2.0.RELEASE</spring-shell.version>
+  </properties>
+
   <repositories>
     <repository>
       <id>spring-libs-release</id>
@@ -72,11 +79,6 @@
       <url>https://repo.spring.io/libs-release</url>
     </repository>
   </repositories>
-
-  <properties>
-    <pivotal-gemfire.version>9.5.1</pivotal-gemfire.version>
-    <spring-data-releasetrain.version>Lovelace-SR3</spring-data-releasetrain.version>
-  </properties>
 
   <dependencyManagement>
     <dependencies>

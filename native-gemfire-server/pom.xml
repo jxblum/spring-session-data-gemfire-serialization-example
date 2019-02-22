@@ -14,10 +14,6 @@
   <artifactId>native-gemfire-server</artifactId>
   <packaging>jar</packaging>
 
-  <properties>
-    <spring-shell.version>1.2.0.RELEASE</spring-shell.version>
-  </properties>
-
   <dependencies>
 
     <dependency>
