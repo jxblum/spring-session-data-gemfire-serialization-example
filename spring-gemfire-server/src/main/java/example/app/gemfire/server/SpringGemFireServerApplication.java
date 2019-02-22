@@ -15,6 +15,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.gemfire.config.annotation.CacheServerApplication;
+import org.springframework.data.gemfire.config.annotation.EnableHttpService;
 import org.springframework.data.gemfire.config.annotation.EnableLocator;
 import org.springframework.data.gemfire.config.annotation.EnableManager;
 import org.springframework.lang.Nullable;
@@ -47,6 +48,7 @@ import org.springframework.session.data.gemfire.config.annotation.web.http.GemFi
   regionName = "Sessions",
   sessionSerializerBeanName = GemFireHttpSessionConfiguration.SESSION_DATA_SERIALIZER_BEAN_NAME
 )
+@EnableHttpService
 @EnableLocator
 @EnableManager(start = true)
 @SuppressWarnings("unused")
