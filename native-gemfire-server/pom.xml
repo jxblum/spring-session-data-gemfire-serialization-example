@@ -25,6 +25,8 @@
       <groupId>org.springframework.shell</groupId>
       <artifactId>spring-shell</artifactId>
       <version>${spring-shell.version}</version>
+      <optional>true</optional>
+      <scope>runtime</scope>
     </dependency>
 
     <!-- Application classes -->
