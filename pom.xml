@@ -74,8 +74,34 @@
   </repositories>
 
   <properties>
+    <pivotal-gemfire.version>9.5.1</pivotal-gemfire.version>
     <spring-data-releasetrain.version>Lovelace-SR3</spring-data-releasetrain.version>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>io.pivotal.gemfire</groupId>
+        <artifactId>geode-core</artifactId>
+        <version>${pivotal-gemfire.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.pivotal.gemfire</groupId>
+        <artifactId>geode-cq</artifactId>
+        <version>${pivotal-gemfire.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.pivotal.gemfire</groupId>
+        <artifactId>geode-lucene</artifactId>
+        <version>${pivotal-gemfire.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>io.pivotal.gemfire</groupId>
+        <artifactId>geode-wan</artifactId>
+        <version>${pivotal-gemfire.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
 
