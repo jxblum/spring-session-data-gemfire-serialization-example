@@ -24,6 +24,8 @@ import example.app.ext.model.Phone;
 @SuppressWarnings("unused")
 public class Customer implements Serializable {
 
+  private static final Resource customerResource = Resource.Builder.create().build().init();
+
   private Gender gender;
 
   private Phone phone;
